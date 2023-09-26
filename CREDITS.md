@@ -1,6 +1,6 @@
 # Lilian                : 
 # Yann                  : 
-# Eloi                  : 
+# Eloi                  : 100 $US 
 # Pierrick              : 
 # Noury Abdourahamane   : 
 # Lony                  : 65,90 € | 71,36 $
