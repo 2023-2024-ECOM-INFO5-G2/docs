@@ -1,16 +1,14 @@
-
-
-
 entity Patient {
 	idPatient Int unique required
     firstName String required
     lastName String required
-    weight Float required
+    weight Float
 }
 
 entity AideSoignant {
-	firstName String
-    lastName String
+	idSoignant Int unique required
+	firstName String required
+    lastName String required
 }
 
 // an ignored comment
@@ -42,30 +40,18 @@ entity Aliment {
 	/**
 	* The firstname attribute.
 	*/
-	firstName String
-	lastName String
-	email String
-	phoneNumber String
-	hireDate Instant
-	salary Long
-	commissionPct Long
+	idAliment Int unique required
+    name String 
+    apportCalorique Int unique
 }
 
-entity Job {
-	jobTitle String
-	minSalary Long
-	maxSalary Long
+entity Medecin {
+	idMedecin Int unique required
+    firstName String required
+    lastName String required
 }
 
-entity JobHistory {
-	startDate Instant
-	endDate Instant
-	language Language
-}
 
-enum Language {
-    FRENCH, ENGLISH, SPANISH
-}
 
 relationship OneToOne {
 	Country{region} to Region
@@ -81,19 +67,15 @@ relationship OneToOne {
 
 relationship ManyToMany {
 	Job{task(title)} to Task{job}
+    AideSoignant{idSoignant} to Patient{idPatient}
+    Infirmiere to Patient
+    Aliment to Repas
+    Patient to Repas
 }
 
 // defining multiple OneToMany relationships with comments
 relationship OneToMany {
-	Employee to Job{employee}
-	/**
-	* A relationship
-	*/
-	Department to
-	/**
-	* Another side of the same relationship
-	*/
-	Employee{department}
+	Medecin to Patient{idMedecin}
 }
 
 relationship ManyToOne {
@@ -119,4 +101,3 @@ service all with serviceImpl except Employee, Job
 
 // Set an angular suffix
 // angularSuffix * with mySuffix
-
