@@ -1,5 +1,5 @@
 # Lilian                : 
-# Yann                  : 
+# Yann                  : 100$
 # Eloi                  : 100 $US 
 # Pierrick              : 
 # Noury Abdourahamane   : 
