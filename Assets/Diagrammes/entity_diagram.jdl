@@ -1,103 +1,59 @@
+// Classes //
+
 entity Patient {
-	idPatient Int unique required
-    firstName String required
-    lastName String required
-    weight Float
+	idPatient Integer unique required
+    prenom String required
+    nom String required
+    sexe String required
+    dateDeNaissance LocalDate required
+    chambre Integer required
+    poids Float
+    dateArrivee LocalDate required
 }
 
 entity AideSoignant {
-	idSoignant Int unique required
-	firstName String required
-    lastName String required
+	idSoignant Integer unique required
+	prenom String required
+    nom String required
 }
 
-// an ignored comment
-/** not an ignored comment */
 entity Infirmiere {
-	streetAddress String
-	postalCode String
-	city String
-	stateProvince String
+	idInfirmiere Integer unique required
+    prenom String required
+    nom String required
 }
 
 entity Admin {
-	departmentName String required
+	idAdmin Integer unique required
+	prenom String required
+    nom String required
 }
 
-/**
- * Task entity.
- * @author The JHipster team.
- */
 entity Repas {
-	title String
-	description String
-}
-
-/**
- * The Employee entity.
- */
-entity Aliment {
-	/**
-	* The firstname attribute.
-	*/
-	idAliment Int unique required
-    name String 
-    apportCalorique Int unique
+	idRepas Integer unique required
+	nom String required
+	description String required
+    apportCalorique Integer required
 }
 
 entity Medecin {
-	idMedecin Int unique required
+	idMedecin Integer unique required
     firstName String required
     lastName String required
 }
 
-
-
-relationship OneToOne {
-	Country{region} to Region
-}
-
-relationship OneToOne {
-	Location{country} to Country
-}
+// Relations //
 
 relationship OneToOne {
 	Department{location} to Location
 }
 
 relationship ManyToMany {
-	Job{task(title)} to Task{job}
-    AideSoignant{idSoignant} to Patient{idPatient}
-    Infirmiere to Patient
-    Aliment to Repas
-    Patient to Repas
+    AideSoignant{idSoignant} to Patient
+    Infirmiere{idInfirmiere} to Patient
+    Repas{idRepas} to Patient
 }
 
-// defining multiple OneToMany relationships with comments
 relationship OneToMany {
-	Medecin to Patient{idMedecin}
+	Medecin{idMedecin} to Patient{idMedecin}
 }
-
-relationship ManyToOne {
-	Employee{manager} to Employee
-}
-
-// defining multiple oneToOne relationships
-relationship OneToOne {
-	JobHistory{job} to Job
-	JobHistory{department} to Department
-	JobHistory{employee} to Employee
-}
-
-// Set pagination options
-paginate JobHistory, Employee with infinite-scroll
-paginate Job with pagination
-
-// Use Data Transfer Objects (DTO)
-// dto * with mapstruct
-
-// Set service options to all except few
-service all with serviceImpl except Employee, Job
-
-// Set an angular suffix
-// angularSuffix * with mySuffix
