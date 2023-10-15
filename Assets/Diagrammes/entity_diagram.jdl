@@ -44,16 +44,15 @@ entity Medecin {
 
 // Relations //
 
-relationship OneToOne {
-	Department{location} to Location
-}
 
 relationship ManyToMany {
-    AideSoignant{idSoignant} to Patient
-    Infirmiere{idInfirmiere} to Patient
-    Repas{idRepas} to Patient
+
+    AideSoignant{idSoignant} to Patient{idPatient}
+    Infirmiere{idInfirmiere} to Patient{idPatient}
+    Repas{idRepas} to Patient{idPatient}
 }
 
 relationship OneToMany {
 	Medecin{idMedecin} to Patient{idMedecin}
 }
+
