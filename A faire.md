@@ -5,7 +5,7 @@ Choix Architecture
 
 ## Documenter du projet
  - Documenter la démarches
- - documenter les étpaes de debug en cas de panne
+ - Documenter les étapes de debug en cas de panne
 
 ## Revue de code
 
