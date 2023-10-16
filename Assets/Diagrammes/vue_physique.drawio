@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T09:51:12.034Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="YYm2Y3ppfAjBRNDdofzT" version="22.0.4" type="device">
+<mxfile host="app.diagrams.net" modified="2023-10-16T09:56:51.443Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="g-_dvurMSdJLjKw77GTZ" version="22.0.4" type="device">
   <diagram name="Page-1" id="23u6SrQtKCb5562ZUjSD">
     <mxGraphModel dx="574" dy="297" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="450" pageHeight="280" math="0" shadow="0">
       <root>
@@ -20,7 +20,7 @@
             <mxPoint x="70" y="130" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TJQ_uTV3yg_q_GrVVXrm-3" value="Aide Soignante" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="TJQ_uTV3yg_q_GrVVXrm-3" value="Soignant(e)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="30" y="100" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="TJQ_uTV3yg_q_GrVVXrm-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="TJQ_uTV3yg_q_GrVVXrm-1">
