@@ -1,25 +1,12 @@
-# Lilian                : 
-# Yann                  : 100$
-# Eloi                  : 100 $US 
-# Pierrick              : 
-# Noury Abdourahamane   : 
-# Lony                  : 65,90 € | 71,36 $
+# Crédits Azure
 
-## update : 26/09/2023
+Montants des crédits Azure en $
 
-# Lilian 		: 94.79 $
-# Yann 			: 95.69 $
-# Eloi 			: 95.00 $
-# Pierrick 		: 93.93 $
-# Noury Abdourahamane 	: 95.50 $
-
-## update: 24/10/2023
-
-# Lilian 		: 94.79 $
-# Yann 			: (95.69) $
-# Eloi 			: 87.00 $
-# Pierrick 		: 93.93 $
-# Noury Abdourahamane 	: (95.50) $
-
-## Last Update : 24/10/2023
-
+|                     | 26/09 | 03/10 | 10/10 | 17/10 | 24/10 |
+|---------------------|-------|-------|-------|-------|-------|
+| Yann                | 100   | 95.69 | 95.69 | 95.69 |       |
+| Eloi                | 100   | 95    | 95    | 95    | 87    |
+| Pierrick            | 100   | 93.93 | 93.93 | 93.93 | 93.93 |
+| Lilian              | 100   | 94.79 | 94.79 | 94.79 | 94.79 |
+| Lony                | 71.36 | 71.36 | 71.36 | 71.36 | 71.36 |
+| Noury Abdourahamane | 100   | 100   | 100   | 100   |       |
