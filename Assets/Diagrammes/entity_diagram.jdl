@@ -7,8 +7,7 @@ entity Patient {
     sexe String required
     dateDeNaissance LocalDate required
     numChambre Integer required
-    poids Float
-    imc Float
+    taille Float
     dateArrivee LocalDate required
     infoComplementaires TextBlob
 }
@@ -57,6 +56,7 @@ entity HistoriquePoids {
 	idHistorique Integer unique required
     date LocalDate required
     poids Float required
+    epa Float required
 }
 
 // Relations //
@@ -83,6 +83,7 @@ relationship OneToMany {
 relationship OneToOne {
     Patient to HistoriquePoids
     Rappel to Patient
+    
 }
 
 
