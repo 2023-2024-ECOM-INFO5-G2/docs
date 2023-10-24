@@ -13,5 +13,13 @@
 # Pierrick 		: 93.93 $
 # Noury Abdourahamane 	: 95.50 $
 
-## Last Update : 10/10/2023
+## update: 24/10/2023
+
+# Lilian 		: 94.79 $
+# Yann 			: (95.69) $
+# Eloi 			: 87.00 $
+# Pierrick 		: 93.93 $
+# Noury Abdourahamane 	: (95.50) $
+
+## Last Update : 24/10/2023
 
