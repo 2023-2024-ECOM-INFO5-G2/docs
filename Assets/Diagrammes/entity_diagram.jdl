@@ -53,17 +53,17 @@ entity Mesure{
 // Relations //
 
 relationship ManyToMany {
-	User to AideSoignant
-    User to Infirmiere
-    User to Admin
-    User to Medecin
+	Etablissement to User with builtInEntity
+    AideSoignant to User with builtInEntity
+    Infirmiere to User with builtInEntity
+    Medecin to User with builtInEntity
     AideSoignant to Patient
     Infirmiere to Patient
     Repas to Patient
     Rappel to Medecin
     Medecin to Alerte
     Alerte to Patient
-    User to Etablissement
+    
 }
 
 relationship OneToMany {
