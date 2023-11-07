@@ -1,7 +1,6 @@
 // Classes //
 
 entity Patient {
-	idPatient Integer unique required
     prenom String required
     nom String required
     sexe String required
@@ -13,19 +12,15 @@ entity Patient {
 }
 
 entity AideSoignant {
-	idSoignant Integer unique required
 }
 
 entity Infirmiere {
-	idInfirmiere Integer unique required
 }
 
 entity Medecin {
-	idMedecin Integer unique required
 }
 
 entity Etablissement {
-	idEtablissement Integer unique required
     nom String
     adresse String required
     ville String required
@@ -33,27 +28,23 @@ entity Etablissement {
 }
 
 entity Repas {
-	idRepas Integer unique required
 	nom String required
 	description String required
     apportCalorique Integer required
 }
 
 entity Rappel {
-	idRappel Integer unique required
     frequence String required
     echeance LocalDate required
     tache String required
 }
 
 entity Alerte {
-	idAlrter Integer unique required
     description String
     date LocalDate
 }
 
-entity HistoriquePoids {
-	idHistorique Integer unique required
+entity Mesure{
     date LocalDate required
     poids Float required
     epa Float required
@@ -66,9 +57,9 @@ relationship ManyToMany {
     User to Infirmiere
     User to Admin
     User to Medecin
-    AideSoignant{idSoignant} to Patient{idPatient}
-    Infirmiere{idInfirmiere} to Patient{idPatient}
-    Repas{idRepas} to Patient{idPatient}
+    AideSoignant to Patient
+    Infirmiere to Patient
+    Repas to Patient
     Rappel to Medecin
     Medecin to Alerte
     Alerte to Patient
@@ -76,12 +67,12 @@ relationship ManyToMany {
 }
 
 relationship OneToMany {
-	Medecin{idMedecin} to Patient{idPatient}
-    Etablissement{idEtablissement} to Patient{idPatient}
+	Medecin to Patient
+    Etablissement to Patient
+    Patient to Mesure
 }
 
 relationship OneToOne {
-    Patient to HistoriquePoids
     Rappel to Patient
     
 }
