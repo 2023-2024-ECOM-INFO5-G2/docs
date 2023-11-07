@@ -46,8 +46,8 @@ entity Alerte {
 
 entity Mesure{
     date LocalDate required
-    poids Float required
-    epa Float required
+    nomValeur String required
+    valeur Float required
 }
 
 // Relations //
