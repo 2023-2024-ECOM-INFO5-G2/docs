@@ -1,0 +1,74 @@
+// Classes //
+
+entity Patient {
+    prenom String required
+    nom String required
+    sexe String required
+    taille Float required
+    dateDeNaissance LocalDate required
+    numChambre Integer required
+    dateArrivee ZonedDateTime required
+    infosComplementaires String
+}
+
+entity Etablissement {
+    nom String
+    adresse String required
+    ville String required
+    codePostal String required
+}
+
+entity Repas {
+	nom String required
+    date ZonedDateTime required
+    apportCalorique Float
+    poidsConsomme Float
+    description String
+}
+
+entity Rappel {
+	date ZonedDateTime required
+    frequenceJour Integer required
+    echeance LocalDate required
+    tache String required
+}
+
+entity Alerte {
+    description String required
+    date ZonedDateTime required
+}
+
+
+entity MesurePoids{
+    valeur Float required
+    date ZonedDateTime required
+}
+
+entity MesureEPA{
+    valeur Float required
+    date ZonedDateTime required
+}
+
+entity MesureAlbumine{
+    valeur Float required
+    date ZonedDateTime required
+}
+
+// Relations //
+relationship ManyToMany {
+	Etablissement to User with builtInEntity
+    Rappel to User with builtInEntity
+}
+
+relationship OneToMany {
+	Etablissement to Patient
+    Patient to Alerte
+    Patient to Rappel 
+  	Patient to MesurePoids
+    Patient to MesureEPA
+    Patient to MesureAlbumine
+    Patient to Repas
+    Patient to User with builtInEntity
+}
+
+
